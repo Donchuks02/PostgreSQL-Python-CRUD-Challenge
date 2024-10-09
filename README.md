@@ -2,6 +2,10 @@
 
 This project demonstrates how to perform basic CRUD (Create, Read, Update, Delete) operations using PostgreSQL with Python. The project is organized in a modular fashion, with each CRUD operation defined in its own file, and the database configuration handled via a `database.ini` file for ease of use and maintainability.
 
+
+## Task: Write a Python script using psycopg2 or SQLAlchemy to connect to a PostgreSQL database. Perform basic CRUD (Create, Read, Update, Delete) operations on a simple users table with columns id, name, email, and date_joined.
+Goal: Ensure you understand how to create connections, execute queries, and handle transactions.
+
 ## Table of Contents
 - [Project Structure](#project-structure)
 - [Requirements](#requirements)
