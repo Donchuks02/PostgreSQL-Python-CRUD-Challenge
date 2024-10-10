@@ -1,7 +1,25 @@
 # PostgreSQL + Python CRUD Challenge
 
-This project demonstrates how to perform basic CRUD (Create, Read, Update, Delete) operations using PostgreSQL with Python. The project is organized in a modular fashion, with each CRUD operation defined in its own file, and the database configuration handled via a `database.ini` file for ease of use and maintainability.
+This project demonstrates how to perform basic CRUD (Create, Read, Update, Delete) operations using PostgreSQL with Python. The project is organized in a modular fashion, with each CRUD operation defined in its own file, and the database configuration handled via a `database.ini` file for ease of use and maintainability.This project now also includes functionality for managing departments and associating users with multiple departments.
 
+# ###########################################################################################
+
+## Updates
+Now departments table has been added and user can belong to one or many departments.
+### Recent Additions
+- **Departments Table**: A new `departments` table has been added to store department names. Each department name is unique.
+- **User-Departments Relationship**: A new `user_departments` table has been introduced to establish a many-to-many relationship between users and departments. This table references the `users` table by user ID and the `departments` table by department name.
+
+### Updated Scripts
+- **`create_table.py`**: Modified to include the creation of `departments` and `user_departments` tables, along with necessary foreign key constraints.
+- **`insert_user.py`**: Updated to include functions for inserting multiple departments and user-department relationships.
+
+### Example Usage
+To insert departments and associate them with users, use the following functions in `insert_user.py`:
+- `insert_many_departments`: Inserts multiple departments into the `departments` table.
+- `insert_user_departments`: Associates users with departments in the `user_departments` table.
+
+# #####################################################################################################
 
 ## Task: Write a Python script using psycopg2 or SQLAlchemy to connect to a PostgreSQL database. Perform basic CRUD (Create, Read, Update, Delete) operations on a simple users table with columns id, name, email, and date_joined.
 Goal: Ensure you understand how to create connections, execute queries, and handle transactions.
