@@ -4,18 +4,20 @@ import psycopg2
 
 def view_recent_data():
   config = get_config()
-  query = """SELECT
-users.id,
-users.name,
-users.email,
-departments.name
-FROM
-users
-JOIN
-user_departments
-ON users.id = user_departments.user_id
-JOIN
-departments ON user_departments.department_name = departments.name;"""
+  query = """
+            SELECT
+            users.id,
+            users.name,
+            users.email,
+            departments.name
+            FROM
+            users
+            JOIN
+            user_departments
+            ON users.id = user_departments.user_id
+            JOIN
+            departments ON user_departments.department_name = departments.name;
+          """
 
   try:
     with psycopg2.connect(**config) as connection:
